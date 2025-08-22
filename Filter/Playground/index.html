@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CinemaHub - Movie Collection</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <i class="fas fa-film"></i>
+    </div>
+    <h1>CinemaHub</h1>
+    <p class="subtitle">Browse our curated collection of the finest movies from all genres and eras</p>
+  </header>
+
+  <div class="container">
+    <div class="controls">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Search for movies...">
+      </div>
+      <div class="filters">
+        <select id="qualityFilter">
+          <option value="all">All Quality</option>
+          <option value="HD">HD Only</option>
+          <option value="Cam">Cam Only</option>
+        </select>
+        <select id="yearFilter">
+          <option value="all">All Years</option>
+          <option value="2020">2020s</option>
+          <option value="2010">2010s</option>
+          <option value="2000">2000s</option>
+          <option value="1990">1990s</option>
+        </select>
+        <select id="sortBy">
+          <option value="rating">Sort by Rating</option>
+          <option value="year">Sort by Year</option>
+          <option value="title">Sort by Title</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="movie-grid" id="movieGrid">
+      <!-- Movie cards will be generated here -->
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2023 CinemaHub - Your Ultimate Movie Destination</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="movies.js"></script>
+</body>
+</html>
