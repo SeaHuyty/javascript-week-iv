@@ -19,13 +19,63 @@ function renderMovies(movies) {
     return;
   }
 
-  // Your code here
+  let filteredMovies = {};
+
+
+
+
+
+
+
+
+
+  // Array Element Sample (Data Sample)
+  // const movie = {
+  //   id: 28,
+  //   title: "My Neighbor Totoro",
+  //   year: 1988,
+  //   rating: 8.2,
+  //   quality: "HD",
+  //   poster: "https://i.pinimg.com/736x/f7/3e/ca/f73eca98ae27d6ae174c707f44c610bb.jpg",
+  //   genres: ["Animation", "Fantasy", "Family"],
+  //   duration: 86
+  // }
+
+  // Your filter() code here
+  // Hint: use includes() to get an element of an array
+  // Example:
+  filteredMovies = movies.filter(movie => movie.id / 1 == movie.id);
+
+  // 1. Get all TV Series only (Type = TV Series)
+
+
+  // 2. Get all movies longer then 120 minutes
   
   
-  movies.forEach((movie, index) => {
+  // 3. Get all movies with genre "Animation"
+
+
+  // 4. Get all sci-fi movies with rating above 8.0
+
+
+  // 5. Get all movies made between 2010 and 2020
+
+
+  // 6. Find all Animation movies after 2015 with rating > 8.0
+
+
+
+
+
+
+
+
+  filteredMovies.forEach((movie, index) => {
     const card = document.createElement('div');
     card.className = 'movie-card';
     card.style.animationDelay = `${index * 0.1}s`;
+
+    let movieGenre = movie.genres.join(', ');
     
     // Single star + rating
     const ratingHtml = `<i class="fas fa-star"></i> <span>${movie.rating}</span>`;
@@ -39,15 +89,15 @@ function renderMovies(movies) {
           <div class="movie-rating">${ratingHtml}</div>
           <div class="movie-quality">${movie.quality}</div>
           <div class="movie-year">${movie.year}</div>
+          <div class="movie-type">${movie.type}</div>
         </div>
         <h3 class="movie-title">${movie.title}</h3>
+        <div class="movie-meta-2">
+          <span class="movie-id">Genre: ${movieGenre}</span>
+        </div>
         <div class="movie-meta">
-          <span class="movie-id">#${movie.id.toString().padStart(2, '0')}</span>
-          <div class="movie-actions">
-            <button class="action-btn"><i class="fas fa-heart"></i></button>
-            <button class="action-btn"><i class="fas fa-bookmark"></i></button>
-            <button class="action-btn"><i class="fas fa-info"></i></button>
-          </div>
+          <span class="movie-id">ID: #${movie.id.toString().padStart(2, '0')}</span>
+          <span class="movie-id">Duration: ${movie.duration.toString().padStart(2, '0')} min</span>
         </div>
       </div>
     `;
